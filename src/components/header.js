@@ -1,6 +1,5 @@
 import React from 'react';
 import brand from '../images/brand.png';
-import '../pages/styles.scss';
 
 const Header = () => (
 	<nav className="navbar" role="navigation" aria-label="main navigation">
