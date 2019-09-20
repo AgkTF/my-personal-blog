@@ -1,21 +1,56 @@
-import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import React from 'react';
+import SEO from '../components/seo';
+import Logo from '../images/whale.svg';
+import PostBox from '../components/post-box';
+import Layout from '../components/layout';
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+	<Layout>
+		<SEO title="Home" />
+		<section className="hero is-medium">
+			<div
+				className="hero-body"
+				style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
+			>
+				<div className="container has-text-centered">
+					<div className="columns">
+						<div className="column is-6 is-offset-3">
+							<img
+								src={Logo}
+								style={{ width: '75%', marginBottom: '2.5rem' }}
+							/>
+							<h1 className="title">Welcome to AgkTF's Blog</h1>
+							<h2 className="subtitle">
+								Web Development, Front To Back
+							</h2>
+							<div
+								className="notification is-warning"
+								style={{
+									margin: 'auto',
+									maxWidth: '40%',
+									paddingLeft: '1rem',
+									paddingRight: '1rem'
+								}}
+							>
+								<strong>Explore the latest articles</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-export default IndexPage
+		<section className="section">
+			<div className="container">
+				<div className="columns is-multiline">
+					<PostBox />
+					<PostBox />
+					<PostBox />
+					<PostBox />
+				</div>
+			</div>
+		</section>
+	</Layout>
+);
+
+export default IndexPage;

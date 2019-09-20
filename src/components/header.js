@@ -12,8 +12,8 @@ const Header = () => (
 				/>
 			</a>
 		</div>
-		<div className="navbar-menu is-active">
-			<div className="navbar-end">
+		<div className="navbar-menu">
+			{/* <div className="navbar-end">
 				<div className="navbar-item">
 					<input
 						className="input is-rounded is-small"
@@ -21,7 +21,7 @@ const Header = () => (
 						placeholder="Search the blog..."
 					></input>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	</nav>
 );
