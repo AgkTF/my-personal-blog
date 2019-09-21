@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-const postBox = ({ title, excerpt }) => {
+const postBox = ({ title, excerpt, path }) => {
 	return (
 		<div className="column is-4-desktop is-6-tablet is-12-mobile">
 			<div className="box">
@@ -21,14 +21,16 @@ const postBox = ({ title, excerpt }) => {
 					</div>
 					<div className="media-content">
 						<div className="content has-text-centered">
-							<h5 className="title is-5">{title}</h5>
+							<h5 className="title is-5">
+								<Link to={path}>{title}</Link>
+							</h5>
 							<p>{excerpt}</p>
 							<nav className="level is-mobile">
 								<div className="level-left"></div>
 								<div className="level-right">
 									{' '}
 									<p>
-										<Link className="level-item" to="/">
+										<Link className="level-item" to={path}>
 											Read more
 										</Link>
 									</p>

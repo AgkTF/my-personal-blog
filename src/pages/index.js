@@ -19,6 +19,9 @@ const IndexPage = () => {
 							publishDate
 						}
 						excerpt
+						fields {
+							slug
+						}
 					}
 				}
 			}
@@ -86,6 +89,7 @@ const IndexPage = () => {
 									key={edge.node.frontmatter.title}
 									title={edge.node.frontmatter.title}
 									excerpt={edge.node.excerpt}
+									path={edge.node.fields.slug}
 								/>
 							);
 						})}
