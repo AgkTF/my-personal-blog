@@ -21,8 +21,8 @@ export const pageQuery = graphql`
 const post = props => {
 	return (
 		<Layout>
-			<div className="container">
-				<h1 className="title is-1 has-text-centered">
+			<div className="section">
+				<h1 className="title is-size-2-desktop is-size-4-touch has-text-centered">
 					{props.data.markdownRemark.frontmatter.title}
 				</h1>
 				<p className="subtitle has-text-centered">
@@ -30,11 +30,12 @@ const post = props => {
 				</p>
 
 				<hr />
-				<p
+				<div
+					className="container"
 					dangerouslySetInnerHTML={{
 						__html: props.data.markdownRemark.html
 					}}
-				></p>
+				></div>
 			</div>
 		</Layout>
 	);

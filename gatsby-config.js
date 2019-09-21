@@ -25,7 +25,12 @@ module.exports = {
 				path: `${__dirname}/src/images`
 			}
 		},
-		`gatsby-transformer-remark`,
+		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [`gatsby-remark-bulma`]
+			}
+		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		{
@@ -37,7 +42,7 @@ module.exports = {
 				background_color: `#3D478D`,
 				theme_color: `#3D478D`,
 				display: `minimal-ui`,
-				icon: `src/images/blog-icon.png` // This path is relative to the root of the site.
+				icon: `src/images/blog-icon.png`
 			}
 		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality
