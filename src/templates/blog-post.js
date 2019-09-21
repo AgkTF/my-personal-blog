@@ -22,7 +22,8 @@ const post = props => {
 	return (
 		<Layout>
 			<div className="section">
-				<h1 className="title is-size-2-desktop is-size-4-touch has-text-centered">
+				<h1 className="title is-1 has-text-centered">
+					{/* <h1 className="title is-size-2-desktop is-size-4-touch has-text-centered"> */}
 					{props.data.markdownRemark.frontmatter.title}
 				</h1>
 				<p className="subtitle has-text-centered">
@@ -30,12 +31,15 @@ const post = props => {
 				</p>
 
 				<hr />
-				<div
-					className="container"
-					dangerouslySetInnerHTML={{
-						__html: props.data.markdownRemark.html
-					}}
-				></div>
+				<div className="container">
+					<div
+						id="article-content"
+						className="content"
+						dangerouslySetInnerHTML={{
+							__html: props.data.markdownRemark.html
+						}}
+					></div>
+				</div>
 			</div>
 		</Layout>
 	);
