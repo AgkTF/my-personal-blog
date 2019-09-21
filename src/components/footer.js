@@ -15,7 +15,7 @@ const footer = () => {
 					<div className="columns is-centered">
 						<div className="column is-4">
 							<figure className="image">
-								<img src={Logo} style={{ maxWidth: '300px' }} />
+								<img src={Logo} style={{ maxWidth: '200px' }} />
 							</figure>
 						</div>
 						<div className="column is-8">

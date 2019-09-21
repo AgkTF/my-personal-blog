@@ -45,10 +45,6 @@ made herself on the way.
 4.  Rash opossum less because less some amid besides yikes jeepers frenetic
     impassive fruitlessly shut
 
-    ```
-    yarn add gatsby
-    ```
-
 When she reached the first hills of the Italic Mountains, she had a last view
 back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
 Village and the subline of her own road, the Line Lane. Pityful a rhetoric
@@ -59,3 +55,32 @@ copy.
 > been rewritten a thousand times and everything that was left from its origin
 > would be the word "and" and the Little Blind Text should turn around and
 > return to its own, safe country.
+
+## Add support for images in your markdown files
+
+See the code snippet below to easily add this great feature to your blog posts.
+
+```
+module.exports = {
+   `gatsby-plugin-sharp`,
+		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [
+					`gatsby-remark-bulma`,
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth: 600,
+							linkImagesToOriginal: false,
+							loading: 'lazy',
+							showCaptions: true
+							// markdownCaptions: true
+						}
+					}
+				]
+			}
+		},
+		`gatsby-transformer-sharp`
+}
+```

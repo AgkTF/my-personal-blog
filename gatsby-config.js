@@ -38,9 +38,9 @@ module.exports = {
 							linkImagesToOriginal: false,
 							loading: 'lazy',
 							showCaptions: true
-							// markdownCaptions: true
 						}
-					}
+					},
+					`gatsby-remark-prismjs`
 				]
 			}
 		},

@@ -48,7 +48,7 @@ const IndexPage = () => {
 								<img
 									src={Logo}
 									style={{
-										maxWidth: '300px',
+										maxWidth: '250px',
 										marginBottom: '2.5rem'
 									}}
 								/>
