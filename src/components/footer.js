@@ -9,10 +9,7 @@ import {
 
 const footer = () => {
 	return (
-		<footer
-			className="footer"
-			style={{ paddingBottom: '0.5rem', background: 'tomato' }}
-		>
+		<footer className="footer" style={{ paddingBottom: '0.5rem' }}>
 			<div className="container">
 				<div className="content has-text-centered">
 					<div className="columns is-centered">

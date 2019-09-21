@@ -28,7 +28,10 @@
 		"prop-types": "^15.7.2",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
-		"react-helmet": "^5.2.1"
+		"react-helmet": "^5.2.1",
+		"typeface-comfortaa": "^0.0.76",
+		"typeface-fredoka-one": "^0.0.72",
+		"typeface-montserrat": "^0.0.75"
 	},
 	"devDependencies": {},
 	"keywords": [

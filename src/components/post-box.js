@@ -3,7 +3,7 @@ import React from 'react';
 
 const postBox = () => {
 	return (
-		<div className="column is-6">
+		<div className="column is-4-desktop is-6-tablet is-12-mobile">
 			<div className="box">
 				<div className="ribbon">
 					<span>POPULAR</span>
