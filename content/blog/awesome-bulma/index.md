@@ -60,7 +60,7 @@ copy.
 
 See the code snippet below to easily add this great feature to your blog posts.
 
-```
+```javascript
 module.exports = {
    `gatsby-plugin-sharp`,
 		{
@@ -75,7 +75,6 @@ module.exports = {
 							linkImagesToOriginal: false,
 							loading: 'lazy',
 							showCaptions: true
-							// markdownCaptions: true
 						}
 					}
 				]

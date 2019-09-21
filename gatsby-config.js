@@ -40,7 +40,13 @@ module.exports = {
 							showCaptions: true
 						}
 					},
-					`gatsby-remark-prismjs`
+					{
+						resolve: `gatsby-remark-prismjs`,
+						options: {
+							classPrefix: 'language-',
+							aliases: { sh: 'bash', js: 'javascript' }
+						}
+					}
 				]
 			}
 		},
