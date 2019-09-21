@@ -5,8 +5,9 @@ tags:
 ---
 
 This is my first post on my new fake blog! How exciting!
-
 ([Wikipedia Link](http://en.wikipedia.org/wiki/Salted_duck_egg))
+
+!["Suck it 🍭"](./71UYVVEzOmL._SX466_.jpg)
 
 ## On deer horse aboard tritely yikes and much
 

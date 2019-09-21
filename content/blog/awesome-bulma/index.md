@@ -4,6 +4,8 @@ publishDate: '22-09-2019'
 tags:
 ---
 
+!["A palm tree", "By Axel Houmadi on Unsplash.com"](./axel-houmadi-LRDwiuEVcrU-unsplash.jpg)
+
 Wow! I love blogging so much already.
 
 Did you know that "despite its name, salted duck eggs can also be made from

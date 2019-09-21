@@ -25,14 +25,26 @@ module.exports = {
 				path: `${__dirname}/src/images`
 			}
 		},
+		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
-				plugins: [`gatsby-remark-bulma`]
+				plugins: [
+					`gatsby-remark-bulma`,
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth: 600,
+							linkImagesToOriginal: false,
+							loading: 'lazy',
+							showCaptions: true
+							// markdownCaptions: true
+						}
+					}
+				]
 			}
 		},
 		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
@@ -45,13 +57,6 @@ module.exports = {
 				icon: `src/images/blog-icon.png`
 			}
 		},
-		// {
-		// 	resolve: `gatsby-plugin-typography`,
-		// 	options: {
-		// 		pathToConfigModule: `src/utils/typography`
-		// 		// omitGoogleFont: true
-		// 	}
-		// },
 		`gatsby-plugin-offline` // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
 	]
 };
