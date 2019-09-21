@@ -1,7 +1,8 @@
 import React from 'react';
-// import classes from './post-box.module.css';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
-const postBox = () => {
+const postBox = ({ title, excerpt }) => {
 	return (
 		<div className="column is-4-desktop is-6-tablet is-12-mobile">
 			<div className="box">
@@ -20,21 +21,16 @@ const postBox = () => {
 					</div>
 					<div className="media-content">
 						<div className="content has-text-centered">
-							<h5 className="title is-5">First Blog Post</h5>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit. Aenean efficitur sit amet massa
-								fringilla egestas. Nullam condimentum luctus
-								turpis.
-							</p>
+							<h5 className="title is-5">{title}</h5>
+							<p>{excerpt}</p>
 							<nav className="level is-mobile">
 								<div className="level-left"></div>
 								<div className="level-right">
 									{' '}
 									<p>
-										<a className="level-item" href="/">
+										<Link className="level-item" to="/">
 											Read more
-										</a>
+										</Link>
 									</p>
 								</div>
 							</nav>
@@ -44,6 +40,11 @@ const postBox = () => {
 			</div>
 		</div>
 	);
+};
+
+postBox.propTypes = {
+	title: PropTypes.string,
+	excerpt: PropTypes.string
 };
 
 export default postBox;
