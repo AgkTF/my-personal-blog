@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+// code for box ribbon
 .box {
 	position: relative;
 }
@@ -66,6 +66,7 @@ $body-min-width: 400px;
 
 @import '~bulma/bulma.sass';
 
+// control font sizes for headers in the article body
 #article-content {
 	@include touch {
 		h1 {
@@ -108,4 +109,34 @@ $body-min-width: 400px;
 			font-size: 0.75rem;
 		}
 	}
+}
+
+// language tabs for code blocks
+.gatsby-highlight {
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+}
+
+.gatsby-highlight pre[class*='language-'] {
+	-webkit-overflow-scrolling: touch;
+}
+
+.gatsby-highlight pre[class*='language-']::before {
+	background: black;
+	border-radius: 0 0 0.25rem 0.25rem;
+	color: white;
+	font-size: 12px;
+	letter-spacing: 0.025rem;
+	padding: 0.1rem 0.5rem;
+	position: absolute;
+	right: 1rem;
+	text-align: right;
+	text-transform: uppercase;
+	top: 0;
+}
+
+.gatsby-highlight pre[class='language-javascript']::before {
+	content: 'js';
+	background: #f7df1e;
+	color: black;
 }
