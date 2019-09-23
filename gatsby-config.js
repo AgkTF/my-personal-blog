@@ -5,12 +5,13 @@ require('dotenv').config({
 module.exports = {
 	siteMetadata: {
 		title: `AgkTF's Blog`,
-		description: `This is my personal blog.`,
+		description: `This is the personal blog of AgkTF.`,
 		author: `@agktf`
 	},
 	plugins: [
 		`gatsby-plugin-sass`,
 		`gatsby-plugin-react-helmet`,
+		// `gatsby-plugin-page-progress`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -51,6 +52,13 @@ module.exports = {
 			}
 		},
 		`gatsby-transformer-sharp`,
+		{
+			resolve: `gatsby-plugin-nprogress`,
+			options: {
+				color: `tomato`,
+				showSpinner: false
+			}
+		},
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {

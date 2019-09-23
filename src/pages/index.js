@@ -9,15 +9,14 @@ const IndexPage = () => {
 	// the argument of this function is called tagged template literal.
 	const data = useStaticQuery(graphql`
 		query {
-			allMarkdownRemark {
+			allMarkdownRemark(
+				sort: { fields: [frontmatter___publishDate], order: DESC }
+			) {
 				edges {
 					node {
 						frontmatter {
 							title
 							publishDate
-							imageUrl {
-								absolutePath
-							}
 						}
 						excerpt
 						fields {
@@ -50,10 +49,10 @@ const IndexPage = () => {
 								<h1
 									className="title is-size-1-widescreen is-size-2-desktop is-size-3-touch"
 									style={{
-										'text-shadow': '2px 1px 3px #666'
+										textShadow: '2px 1px 3px #666'
 									}}
 								>
-									Welcome to AgkTF's Blog
+									Welcome to AgkTF&#39;s Blog
 								</h1>
 								<p className="subtitle is-size-4-desktop is-size-6-touch">
 									Web Development, Front To Back
@@ -90,10 +89,6 @@ const IndexPage = () => {
 									title={edge.node.frontmatter.title}
 									excerpt={edge.node.excerpt}
 									path={edge.node.fields.slug}
-									imageUrl={
-										edge.node.frontmatter.imageUrl
-											.absolutePath
-									}
 								/>
 							);
 						})}

@@ -1,7 +1,6 @@
 ---
 title: My First Blog Post 🚀
 publishDate: '21-09-2019'
-imageUrl: ./71UYVVEzOmL._SX466_.jpg
 ---
 
 This is my first post on my new fake blog! How exciting!

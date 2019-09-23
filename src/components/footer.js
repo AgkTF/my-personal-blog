@@ -19,7 +19,7 @@ const footer = () => {
 							</figure>
 						</div>
 						<div className="column is-8">
-							<h4 className="title is-4">AgkTF's Blog</h4>
+							<h4 className="title is-4">AgkTF&#39;s Blog</h4>
 							<p className="subtitle">
 								Tutorials, reviews & more. Giving back to the
 								community.
