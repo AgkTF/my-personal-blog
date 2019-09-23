@@ -31,7 +31,7 @@ const IndexPage = () => {
 	return (
 		<Layout>
 			<SEO title="Home" />
-			<section className="hero is-medium">
+			<section className="hero is-medium is-info">
 				<div
 					className="hero-body"
 					style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
