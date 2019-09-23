@@ -1,7 +1,7 @@
 ---
 title: Bulma is Awesome 🔥
 publishDate: '22-09-2019'
-tags:
+imageUrl: ./axel-houmadi-LRDwiuEVcrU-unsplash.jpg
 ---
 
 !["A palm tree", "By Axel Houmadi on Unsplash.com"](./axel-houmadi-LRDwiuEVcrU-unsplash.jpg)

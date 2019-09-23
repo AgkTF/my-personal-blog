@@ -2,27 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-const postBox = ({ title, excerpt, path }) => {
+import Image from '../components/fixed-image';
+
+const postBox = ({ title, excerpt, path, imageUrl }) => {
 	return (
-		<div className="column is-4-desktop is-6-tablet is-12-mobile">
+		// <div className="column is-4-desktop is-6-tablet is-12-mobile">
+		<div className="column is-8 is-offset-2">
 			<div className="box">
-				<div className="ribbon">
+				{/* <div className="ribbon">
 					<span>POPULAR</span>
-				</div>
+				</div> */}
 
 				<article className="media">
 					<div className="media-left" style={{ margin: 'auto' }}>
 						<figure className="image is-128x128">
-							<img
-								src="https://bulma.io/images/placeholders/128x128.png"
-								alt="Image"
-							/>
+							<Image />
 						</figure>
 					</div>
 					<div className="media-content">
 						<div className="content has-text-centered">
-							<h5 className="title is-5">
-								<Link to={path}>{title}</Link>
+							<h5 className="title is-5 has-text-link">
+								{/* <Link to={path}>{title}</Link> */}
+								{title}
 							</h5>
 							<p>{excerpt}</p>
 							<nav className="level is-mobile">

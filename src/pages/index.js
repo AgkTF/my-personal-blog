@@ -3,8 +3,6 @@ import SEO from '../components/seo';
 import Logo from '../images/whale.svg';
 import PostBox from '../components/post-box';
 import Layout from '../components/layout';
-// import Bg from '../images/background.svg';
-
 import { graphql, useStaticQuery } from 'gatsby';
 
 const IndexPage = () => {
@@ -17,6 +15,9 @@ const IndexPage = () => {
 						frontmatter {
 							title
 							publishDate
+							imageUrl {
+								absolutePath
+							}
 						}
 						excerpt
 						fields {
@@ -31,13 +32,7 @@ const IndexPage = () => {
 	return (
 		<Layout>
 			<SEO title="Home" />
-			<section
-				className="hero is-medium"
-				// style={{
-				// 	backgroundImage: `url(${Bg})`,
-				// 	backgroundSize: 'auto auto'
-				// }}
-			>
+			<section className="hero is-medium">
 				<div
 					className="hero-body"
 					style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
@@ -52,7 +47,12 @@ const IndexPage = () => {
 										marginBottom: '2.5rem'
 									}}
 								/>
-								<h1 className="title is-size-1-widescreen is-size-2-desktop is-size-3-touch">
+								<h1
+									className="title is-size-1-widescreen is-size-2-desktop is-size-3-touch"
+									style={{
+										'text-shadow': '2px 1px 3px #666'
+									}}
+								>
 									Welcome to AgkTF's Blog
 								</h1>
 								<p className="subtitle is-size-4-desktop is-size-6-touch">
@@ -90,6 +90,10 @@ const IndexPage = () => {
 									title={edge.node.frontmatter.title}
 									excerpt={edge.node.excerpt}
 									path={edge.node.fields.slug}
+									imageUrl={
+										edge.node.frontmatter.imageUrl
+											.absolutePath
+									}
 								/>
 							);
 						})}

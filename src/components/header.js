@@ -3,7 +3,11 @@ import brand from '../images/brand.png';
 import { Link } from 'gatsby';
 
 const Header = () => (
-	<nav className="navbar" role="navigation" aria-label="main navigation">
+	<nav
+		className="navbar is-info"
+		role="navigation"
+		aria-label="main navigation"
+	>
 		<div className="navbar-brand">
 			<Link className="navbar-item" to="/">
 				<img

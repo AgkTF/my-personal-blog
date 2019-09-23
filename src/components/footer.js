@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../images/brand.png';
+import Logo from '../images/full-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faTwitter,
@@ -9,7 +9,7 @@ import {
 
 const footer = () => {
 	return (
-		<footer className="footer" style={{ paddingBottom: '0.5rem' }}>
+		<footer className="footer" style={{ paddingBottom: '1.5rem' }}>
 			<div className="container">
 				<div className="content has-text-centered">
 					<div className="columns is-centered">
@@ -67,9 +67,6 @@ const footer = () => {
 								</p>
 							</div>
 						</div>
-					</div>
-					<div className="columns">
-						<div className="column"></div>
 					</div>
 				</div>
 			</div>
