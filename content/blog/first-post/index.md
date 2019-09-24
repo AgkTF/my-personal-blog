@@ -1,6 +1,6 @@
 ---
 title: My First Blog Post 🚀
-publishDate: '21-09-2019'
+date: '2019-09-20T22:00:00.000Z'
 ---
 
 This is my first post on my new fake blog! How exciting!

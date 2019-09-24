@@ -15,7 +15,7 @@ export const pageQuery = graphql`
 		markdownRemark(fields: { slug: { eq: $slug } }) {
 			frontmatter {
 				title
-				publishDate
+				date(formatString: "MMMM DD, YYYY")
 			}
 			html
 			timeToRead
@@ -52,7 +52,7 @@ const post = props => {
 							{props.data.markdownRemark.frontmatter.title}
 						</h1>
 						<p className="subtitle has-text-centered">
-							{props.data.markdownRemark.frontmatter.publishDate}
+							{props.data.markdownRemark.frontmatter.date}
 						</p>
 						<div className="field is-grouped is-grouped-centered">
 							<p className="control">

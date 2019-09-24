@@ -1,10 +1,10 @@
 import React from 'react';
-import brand from '../images/brand.png';
+import brand from '../images/full-logo.png';
 import { Link } from 'gatsby';
 
 const Header = () => (
 	<nav
-		className="navbar is-info"
+		className="navbar"
 		role="navigation"
 		aria-label="main navigation"
 	>

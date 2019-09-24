@@ -10,13 +10,13 @@ const IndexPage = () => {
 	const data = useStaticQuery(graphql`
 		query {
 			allMarkdownRemark(
-				sort: { fields: [frontmatter___publishDate], order: DESC }
+				sort: { fields: [frontmatter___date], order: DESC }
 			) {
 				edges {
 					node {
 						frontmatter {
 							title
-							publishDate
+							date(formatString: "MMMM DD, YYYY")
 						}
 						excerpt
 						fields {
@@ -31,7 +31,7 @@ const IndexPage = () => {
 	return (
 		<Layout>
 			<SEO title="Home" />
-			<section className="hero is-medium is-info">
+			<section className="hero is-medium">
 				<div
 					className="hero-body"
 					style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
