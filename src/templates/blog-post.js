@@ -52,7 +52,7 @@ const post = props => {
 							{props.data.markdownRemark.frontmatter.title}
 						</h1>
 						<p className="subtitle has-text-centered">
-							{props.data.markdownRemark.frontmatter.date}
+							{props.data.markdownRemark.frontmatter.date}-{props.data.markdownRemark.timeToRead} min read
 						</p>
 						<div className="field is-grouped is-grouped-centered">
 							<p className="control">
