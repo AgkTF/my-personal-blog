@@ -1,6 +1,7 @@
 ---
 title: City Vacation ☔️🌅
 date: '2019-09-27T22:00:00.000Z'
+tags: ['Travel']
 ---
 
 !["Crowded sand beach | HD photo by Alexandre Perotto (@perotto) on Unsplash"](./city-vaca.jpeg)

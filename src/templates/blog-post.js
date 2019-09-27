@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import SEO from '../components/seo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -8,6 +8,7 @@ import {
 	faFacebook,
 	faRedditAlien
 } from '@fortawesome/free-brands-svg-icons';
+import kebabCase from 'lodash/kebabCase';
 
 // we will export the graphql query so that gatsby can run it
 export const pageQuery = graphql`
@@ -16,6 +17,7 @@ export const pageQuery = graphql`
 			frontmatter {
 				title
 				date(formatString: "MMMM DD, YYYY")
+				tags
 			}
 			html
 			timeToRead
@@ -52,7 +54,9 @@ const post = props => {
 							{props.data.markdownRemark.frontmatter.title}
 						</h1>
 						<p className="subtitle has-text-centered">
-							{props.data.markdownRemark.frontmatter.date}-{props.data.markdownRemark.timeToRead} min read
+							{props.data.markdownRemark.frontmatter.date}
+							<br />
+							{props.data.markdownRemark.timeToRead} min read
 						</p>
 						<div className="field is-grouped is-grouped-centered">
 							<p className="control">
@@ -112,6 +116,23 @@ const post = props => {
 							__html: props.data.markdownRemark.html
 						}}
 					></div>
+				</div>
+
+				<div className="container" style={{ marginTop: '2.5rem' }}>
+					<div className="tags are-medium">
+						{props.data.markdownRemark.frontmatter.tags.map(tag => {
+							{
+								/* console.log(tag); */
+							}
+							return (
+								<span className="tag" key={tag}>
+									<Link to={`/tags/${kebabCase(tag)}`}>
+										{tag}
+									</Link>
+								</span>
+							);
+						})}
+					</div>
 				</div>
 			</section>
 		</Layout>

@@ -1,6 +1,7 @@
 ---
 title: Bulma is Awesome 🔥
 date: '2019-09-21T22:00:00.000Z'
+tags: ['front-end', 'CSS', 'tutorials']
 ---
 
 !["A palm tree", "By Axel Houmadi on Unsplash.com"](./axel-houmadi-LRDwiuEVcrU-unsplash.jpg)
@@ -70,7 +71,6 @@ module.exports = {
 					{
 						resolve: `gatsby-remark-images`,
 						options: {
-							maxWidth: 600,
 							linkImagesToOriginal: false,
 							loading: 'lazy',
 							showCaptions: true

@@ -1,6 +1,7 @@
 ---
 title: This is a long post 🤤
 date: '2019-10-25T14:48:00.000Z'
+tags: ['tutorials', 'SQL', 'databases', 'back-end']
 ---
 
 # Acquire and configure a loading server

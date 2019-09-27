@@ -1,6 +1,7 @@
 ---
 title: My First Blog Post 🚀
 date: '2019-09-20T22:00:00.000Z'
+tags: ['Web development', 'blogging']
 ---
 
 This is my first post on my new fake blog! How exciting!
