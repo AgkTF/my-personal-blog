@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 const Header = () => (
 	<nav
-		className="navbar"
+		className="navbar is-transparent"
 		role="navigation"
 		aria-label="main navigation"
 	>

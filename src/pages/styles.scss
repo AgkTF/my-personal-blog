@@ -64,6 +64,8 @@ $family-sans-serif: 'poppins';
 // Update some of Bulma's component variables
 $body-min-width: 400px;
 
+// @import '../../node_modules/bulmaswatch/sandstone/bulmaswatch.scss';
+@import '../../node_modules/bulmaswatch/superhero/bulmaswatch.scss';
 @import '~bulma/bulma.sass';
 
 // control font sizes for headers in the article body
@@ -141,6 +143,10 @@ $body-min-width: 400px;
 	color: black;
 }
 
-// .hero {
-// 	background-image: linear-gradient(to bottom, #589cee, #ffffff);
-// }
+span.tag > a {
+	color: aliceblue;
+
+	&:hover {
+		color: #1f2d3b;
+	}
+}

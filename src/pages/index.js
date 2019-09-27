@@ -55,7 +55,10 @@ const IndexPage = () => {
 									Welcome to AgkTF&#39;s Blog
 								</h1>
 								<p className="subtitle is-size-4-desktop is-size-6-touch">
-									Web Development, Front To Back
+									<span className="has-text-weight-bold">
+										JavaScript
+									</span>
+									, Front To Back
 								</p>
 							</div>
 						</div>
