@@ -2,22 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-const postBox = ({ title, excerpt, path }) => {
+const postBox = ({ title, excerpt, path, publishDate }) => {
 	return (
 		<div className="column is-8 is-offset-2">
 			<div className="box">
-				{/* <div className="ribbon">
-					<span>POPULAR</span>
-				</div> */}
 				<article className="media">
 					<div className="media-content">
 						<div className="content has-text-centered">
-							<h5 className="title is-5 has-text-link">
+							<h4 className="title is-4">
 								<Link to={path}>{title}</Link>
-							</h5>
+								{/* {title} */}
+							</h4>
 							<p>{excerpt}</p>
 							<nav className="level is-mobile">
-								<div className="level-left"></div>
+								<div className="level-left">
+									<p className="help">{publishDate}</p>
+								</div>
 								<div className="level-right">
 									{' '}
 									<p>
@@ -38,7 +38,8 @@ const postBox = ({ title, excerpt, path }) => {
 postBox.propTypes = {
 	title: PropTypes.string,
 	excerpt: PropTypes.string,
-	path: PropTypes.string
+	path: PropTypes.string,
+	publishDate: PropTypes.string
 };
 
 export default postBox;

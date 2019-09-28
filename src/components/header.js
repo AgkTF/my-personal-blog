@@ -1,5 +1,6 @@
 import React from 'react';
-import brand from '../images/full-logo.png';
+// import Logo from '../images/full-logo.png';
+import brand from '../images/brand.png';
 import { Link } from 'gatsby';
 
 const Header = () => (

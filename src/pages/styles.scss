@@ -1,71 +1,28 @@
 @charset "utf-8";
-// code for box ribbon
-.box {
-	position: relative;
-}
 
-.ribbon {
-	position: absolute;
-	right: -5px;
-	top: -5px;
-	z-index: 1;
-	overflow: hidden;
-	width: 75px;
-	height: 75px;
-	text-align: right;
-}
+// Set your brand colors
+$my-black: #393e46;
+$my-yellow: hsl(50, 98%, 51%);
+$my-grey: #5c636e;
+$my-white: #f7f7f7;
+$green: hsl(141, 71%, 48%);
 
-.ribbon span {
-	font-size: 10px;
-	font-weight: bold;
-	color: #fff;
-	text-transform: uppercase;
-	text-align: center;
-	line-height: 20px;
-	transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	width: 100px;
-	display: block;
-	background: #79a70a;
-	background: linear-gradient(#9bc90d 0%, #79a70a 100%);
-	box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
-	position: absolute;
-	top: 19px;
-	right: -21px;
-}
-
-.ribbon span::before {
-	content: '';
-	position: absolute;
-	left: 0px;
-	top: 100%;
-	z-index: -1;
-	border-left: 3px solid #79a70a;
-	border-right: 3px solid transparent;
-	border-bottom: 3px solid transparent;
-	border-top: 3px solid #79a70a;
-}
-
-.ribbon span::after {
-	content: '';
-	position: absolute;
-	right: 0px;
-	top: 100%;
-	z-index: -1;
-	border-left: 3px solid transparent;
-	border-right: 3px solid #79a70a;
-	border-bottom: 3px solid transparent;
-	border-top: 3px solid #79a70a;
-}
-
-// Update Bulma's global variables
+// variables
+$body-background-color: $my-black;
 $family-sans-serif: 'poppins';
-
-// Update some of Bulma's component variables
 $body-min-width: 400px;
+$link: $my-yellow;
+$link-hover: $green;
+$text: $my-white;
+$title-color: $my-white !important;
+$title-strong-color: $my-white;
+$subtitle-color: $my-white;
+$strong-color: $my-white;
+$widescreen-enabled: false;
+$input-border-color: transparent;
+$input-shadow: none;
 
-// @import '../../node_modules/bulmaswatch/sandstone/bulmaswatch.scss';
-@import '../../node_modules/bulmaswatch/superhero/bulmaswatch.scss';
+// @import '../../node_modules/bulmaswatch/superhero/bulmaswatch.scss';
 @import '~bulma/bulma.sass';
 
 // control font sizes for headers in the article body
@@ -149,4 +106,21 @@ span.tag > a {
 	&:hover {
 		color: #1f2d3b;
 	}
+}
+
+.box {
+	background-color: $my-grey;
+	color: $my-white;
+}
+
+.navbar {
+	background-color: $my-black;
+}
+
+.footer {
+	background-color: $my-grey;
+}
+
+.content blockquote {
+	background: $my-grey;
 }

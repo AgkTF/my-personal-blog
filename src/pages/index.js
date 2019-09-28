@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../components/seo';
-import Logo from '../images/whale.svg';
+import Logo from '../images/yellow-whale.svg';
 import PostBox from '../components/post-box';
 import Layout from '../components/layout';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -46,16 +46,14 @@ const IndexPage = () => {
 										marginBottom: '2.5rem'
 									}}
 								/>
-								<h1
-									className="title is-size-1-widescreen is-size-2-desktop is-size-3-touch"
-									style={{
-										textShadow: '2px 1px 3px #666'
-									}}
-								>
+								<h1 className="title is-size-1-widescreen is-size-2-desktop is-size-3-touch">
 									Welcome to AgkTF&#39;s Blog
 								</h1>
-								<p className="subtitle is-size-4-desktop is-size-6-touch">
-									<span className="has-text-weight-bold">
+								<p className="subtitle is-size-4-desktop is-size-5-touch">
+									<span
+										className="has-text-weight-bold"
+										style={{ color: '#fcd307' }}
+									>
 										JavaScript
 									</span>
 									, Front To Back
@@ -78,7 +76,7 @@ const IndexPage = () => {
 									margin: 'auto'
 								}}
 							>
-								<p className="has-text-weight-bold">
+								<p className="has-text-weight-bold is-success">
 									Explore the latest articles
 								</p>
 							</div>
@@ -92,6 +90,7 @@ const IndexPage = () => {
 									title={edge.node.frontmatter.title}
 									excerpt={edge.node.excerpt}
 									path={edge.node.fields.slug}
+									publishDate={edge.node.frontmatter.date}
 								/>
 							);
 						})}

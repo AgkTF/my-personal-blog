@@ -5,6 +5,8 @@ import { graphql } from 'gatsby';
 import SEO from '../components/seo';
 import ShareLinks from '../components/share-links';
 import PostTags from '../components/post-tags';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStopwatch } from '@fortawesome/free-solid-svg-icons';
 
 // the result of the above query is passed to the props of the component
 // I just de-structured data from it.
@@ -21,17 +23,15 @@ const post = props => {
 			<div className="hero">
 				<div className="hero-body" style={{ paddingBottom: '0px' }}>
 					<div className="container has-text-centered">
-						<h1
-							className="title is-1"
-							style={{
-								textShadow: '1px 1px 2px #666'
-							}}
-						>
+						<h1 className="title is-1">
 							{props.data.markdownRemark.frontmatter.title}
 						</h1>
 						<p className="subtitle has-text-centered">
 							{props.data.markdownRemark.frontmatter.date}
 							<br />
+							<span>
+								<FontAwesomeIcon icon={faStopwatch} />
+							</span>{' '}
 							{props.data.markdownRemark.timeToRead} min read
 						</p>
 						<ShareLinks
