@@ -8,24 +8,35 @@ import {
 	faGithub
 } from '@fortawesome/free-brands-svg-icons';
 
-const footer = () => {
+const footer = ({ view }) => {
 	return (
-		<footer className="footer" style={{ paddingBottom: '1.5rem' }}>
+		<footer className={'footer' + (view === 'tags' ? ' fixed-footer' : '')}>
 			<div className="container">
 				<div className="content has-text-centered">
 					<div className="columns is-centered">
-						<div className="column is-4">
+						<div className="column is-4" id="footer-brand">
 							<figure className="image">
 								<img src={Logo} style={{ maxWidth: '200px' }} />
 							</figure>
 						</div>
 						<div className="column is-8">
-							<h4 className="title is-4">AgkTF&#39;s Blog</h4>
-							<p className="subtitle">
-								Tutorials, reviews & more. Giving back to the
-								community.
+							<h4 className="title is-size-4 is-size-5-touch">
+								AgkTF&#39;s Blog
+							</h4>
+							<p className="subtitle is-size-7-touch">
+								Everything{' '}
+								<span
+									className="has-text-weight-bold"
+									style={{ color: '#fcd307' }}
+								>
+									JavaScript
+								</span>
+								. Giving back to the community.
 							</p>
-							<p>Made with 💟 by AgkTF</p>
+							<p className="subtitle is-size-7-mobile">
+								Made with 💟 by{' '}
+								<a href="https://agktf.com">AgkTF</a>
+							</p>
 							<div className="field is-grouped is-grouped-centered">
 								<p className="control">
 									<a

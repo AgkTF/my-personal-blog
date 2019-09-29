@@ -13,7 +13,7 @@ const postTags = ({ tags }) => {
 								return (
 									<span className="tag is-link" key={tag}>
 										<Link to={`/tags/${kebabCase(tag)}`}>
-											{tag}
+											{`#${tag}`}
 										</Link>
 									</span>
 								);

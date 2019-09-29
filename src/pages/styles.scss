@@ -101,10 +101,10 @@ $input-shadow: none;
 }
 
 span.tag > a {
-	color: aliceblue;
+	color: #1f2d3b;
 
 	&:hover {
-		color: #1f2d3b;
+		color: $my-grey;
 	}
 }
 
@@ -119,6 +119,40 @@ span.tag > a {
 
 .footer {
 	background-color: $my-grey;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+@include mobile {
+	// @media (max-width: 741px) {
+	#footer-brand {
+		display: none;
+	}
+	.fixed-footer {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		overflow: hidden;
+	}
+}
+
+@media (max-height: 400px) {
+	#footer-brand {
+		display: none;
+	}
+}
+
+@include tablet {
+	@media (min-height: 500px) {
+		.fixed-footer {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			overflow: hidden;
+		}
+	}
 }
 
 .content blockquote {

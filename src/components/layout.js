@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Header from './header';
 import Footer from './footer';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, view }) => {
 	return (
 		<>
 			<Header />
 			<>{children}</>
-			<Footer />
+			<Footer view={view} />
 		</>
 	);
 };

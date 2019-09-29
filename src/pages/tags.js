@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-// Utilities
 import kebabCase from 'lodash/kebabCase';
 
 const TagsPage = ({
@@ -11,7 +10,7 @@ const TagsPage = ({
 		allMarkdownRemark: { group }
 	}
 }) => (
-	<Layout>
+	<Layout view="tags">
 		<SEO title={'Tags'} />
 		<div
 			className="hero-body"
@@ -30,16 +29,39 @@ const TagsPage = ({
 					Explore all the different categories
 				</p>
 			</div>
-			<ul>
-				{group.map(tag => (
-					<li key={tag.fieldValue}>
-						<Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-							{tag.fieldValue} ({tag.totalCount})
-						</Link>
-					</li>
-				))}
-			</ul>
 		</div>
+
+		<section className="section">
+			<div className="container">
+				<div className="columns">
+					<div className="column is-10 is-offset-1">
+						<div className="field is-grouped is-grouped-multiline">
+							{group.map(tag => (
+								<div
+									className="control"
+									key={kebabCase(tag.fieldValue)}
+								>
+									<div className="tags has-addons are-medium">
+										<span className="tag is-warning">
+											<Link
+												to={`/tags/${kebabCase(
+													tag.fieldValue
+												)}/`}
+											>
+												{tag.fieldValue}
+											</Link>
+										</span>
+										<span className="tag is-primary">
+											{tag.totalCount}
+										</span>
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</Layout>
 );
 TagsPage.propTypes = {

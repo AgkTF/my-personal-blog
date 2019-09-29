@@ -69,7 +69,7 @@ const IndexPage = () => {
 					<div className="columns">
 						<div className="column is-4 is-offset-4 has-text-centered">
 							<div
-								className="notification is-warning"
+								className="notification is-success"
 								style={{
 									maxWidth: 'fit-content',
 									padding: '1.25rem',
