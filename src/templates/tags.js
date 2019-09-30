@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
+import Layout from '../components/layout';
 
 const Tags = ({ pageContext, data }) => {
 	const { tag } = pageContext;
@@ -9,25 +10,63 @@ const Tags = ({ pageContext, data }) => {
 		totalCount === 1 ? '' : 's'
 	} tagged with "${tag}"`;
 	return (
-		<section className="hero is-medium">
-			<h1>{tagHeader}</h1>
-			<ul>
-				{edges.map(({ node }) => {
-					const { slug } = node.fields;
-					const { title } = node.frontmatter;
-					return (
-						<li key={slug}>
-							<Link to={slug}>{title}</Link>
-						</li>
-					);
-				})}
-			</ul>
-			{/*
-              This links to a page that does not yet exist.
-              We'll come back to it!
-            */}
-			<Link to="/tags">All tags</Link>
-		</section>
+		<Layout view="singleTag">
+			<div className="hero">
+				<div className="hero-body" style={{ paddingBottom: '0px' }}>
+					<div className="container has-text-centered">
+						<h1 className="title is-size-1-widescreen is-size-2-desktop is-size-3-touch">
+							{tag}
+						</h1>
+						<p className="subtitle is-size-4-desktop is-size-5-touch">
+							{tagHeader}
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<section className="section">
+				<div className="container">
+					<div className="columns">
+						<div className="column is-6 is-offset-3 has-text-centered">
+							<div
+								className="box"
+								style={{ marginBottom: '5rem' }}
+							>
+								<article className="media">
+									<div className="media-content">
+										<div className="content has-text-centered">
+											{edges.map(({ node }) => {
+												const { slug } = node.fields;
+												const {
+													title
+												} = node.frontmatter;
+												return (
+													<h4
+														className="title is-4"
+														key={slug}
+													>
+														<Link to={slug}>
+															{title}
+														</Link>
+													</h4>
+												);
+											})}
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<Link
+								to="/tags"
+								className="button is-success is-medium is-outlined"
+							>
+								Explore All tags
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+		</Layout>
 	);
 };
 

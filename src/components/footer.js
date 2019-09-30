@@ -10,7 +10,12 @@ import {
 
 const footer = ({ view }) => {
 	return (
-		<footer className={'footer' + (view === 'tags' ? ' fixed-footer' : '')}>
+		<footer
+			className={
+				'footer' +
+				(view === 'tags' || view === 'singleTag' ? ' fixed-footer' : '')
+			}
+		>
 			<div className="container">
 				<div className="content has-text-centered">
 					<div className="columns is-centered">
