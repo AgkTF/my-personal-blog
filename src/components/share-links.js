@@ -6,7 +6,7 @@ import {
 	faRedditAlien
 } from '@fortawesome/free-brands-svg-icons';
 
-const shareLinks = ({ title, slug }) => {
+const shareLinks = ({ title, slug, size }) => {
 	return (
 		<div className="field is-grouped is-grouped-centered">
 			<p className="control">
@@ -18,7 +18,7 @@ const shareLinks = ({ title, slug }) => {
 				>
 					<FontAwesomeIcon
 						icon={faTwitter}
-						size="2x"
+						size={size}
 						style={{ color: '#5AA1F2' }}
 					/>
 				</a>
@@ -32,7 +32,7 @@ const shareLinks = ({ title, slug }) => {
 				>
 					<FontAwesomeIcon
 						icon={faFacebook}
-						size="2x"
+						size={size}
 						style={{ color: '#3C5A99' }}
 					/>
 				</a>
@@ -46,7 +46,7 @@ const shareLinks = ({ title, slug }) => {
 				>
 					<FontAwesomeIcon
 						icon={faRedditAlien}
-						size="2x"
+						size={size}
 						style={{ color: '#EA4302' }}
 					/>
 				</a>

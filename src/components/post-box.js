@@ -10,8 +10,14 @@ const postBox = ({ title, excerpt, path, publishDate }) => {
 					<div className="media-content">
 						<div className="content has-text-centered">
 							<h4 className="title is-4">
+								{/* <p
+								style={{
+									fontFamily: 'cinzel',
+									fontSize: '1.5rem'
+								}}
+							> */}
 								<Link to={path}>{title}</Link>
-								{/* {title} */}
+								{/* </p> */}
 							</h4>
 							<p>{excerpt}</p>
 							<nav className="level is-mobile">

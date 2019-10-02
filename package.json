@@ -17,6 +17,7 @@
 		"eslint-plugin-react": "^7.14.3",
 		"gatsby": "^2.15.15",
 		"gatsby-image": "^2.2.19",
+		"gatsby-plugin-disqus": "^1.1.2",
 		"gatsby-plugin-manifest": "^2.2.16",
 		"gatsby-plugin-nprogress": "^2.1.7",
 		"gatsby-plugin-offline": "^2.2.10",
@@ -38,12 +39,15 @@
 		"react-helmet": "^5.2.1",
 		"react-reading-progress": "^0.3.0",
 		"react-typography": "^0.16.19",
+		"typeface-cinzel": "^0.0.72",
+		"typeface-jura": "^0.0.72",
 		"typeface-montserrat": "^0.0.75",
 		"typeface-poppins": "^0.0.72"
 	},
 	"devDependencies": {},
 	"keywords": [
-		"gatsby"
+		"gatsby",
+		"blog"
 	],
 	"license": "MIT",
 	"scripts": {
@@ -55,7 +59,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/gatsbyjs/gatsby-starter-default"
+		"url": "https://github.com/AgkTF/my-personal-blog"
 	},
 	"bugs": {
 		"url": "https://github.com/gatsbyjs/gatsby/issues"

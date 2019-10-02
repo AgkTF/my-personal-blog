@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const Tags = ({ pageContext, data }) => {
 	const { tag } = pageContext;
@@ -11,6 +12,7 @@ const Tags = ({ pageContext, data }) => {
 	} tagged with "${tag}"`;
 	return (
 		<Layout view="singleTag">
+			<SEO title={tag} />
 			<div className="hero">
 				<div className="hero-body" style={{ paddingBottom: '0px' }}>
 					<div className="container has-text-centered">

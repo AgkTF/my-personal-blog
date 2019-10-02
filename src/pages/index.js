@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../components/seo';
-import Logo from '../images/yellow-whale.svg';
+import Logo from '../images/grey-whale.svg';
 import PostBox from '../components/post-box';
 import Layout from '../components/layout';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -46,7 +46,10 @@ const IndexPage = () => {
 										marginBottom: '2.5rem'
 									}}
 								/>
-								<h1 className="title is-size-1-widescreen is-size-2-desktop is-size-3-touch">
+								<h1
+									className="title is-size-1-widescreen is-size-2-desktop is-size-3-touch"
+									style={{ fontFamily: 'jura' }}
+								>
 									Welcome to AgkTF&#39;s Blog
 								</h1>
 								<p className="subtitle is-size-4-desktop is-size-5-touch">

@@ -34,17 +34,23 @@ const post = props => {
 							</span>{' '}
 							{props.data.markdownRemark.timeToRead} min read
 						</p>
-						<ShareLinks
-							title={props.data.markdownRemark.frontmatter.title}
-							slug={props.data.markdownRemark.fields.slug}
-						/>
+						<p>
+							Share this article on:{' '}
+							<ShareLinks
+								title={
+									props.data.markdownRemark.frontmatter.title
+								}
+								slug={props.data.markdownRemark.fields.slug}
+								size="lg"
+							/>{' '}
+						</p>
 					</div>
 				</div>
 			</div>
 
-			<hr />
 			<section className="section" style={{ paddingTop: '0px' }}>
 				<div className="container">
+					<hr style={{ height: '1px' }} />
 					<div
 						id="article-content"
 						className="content"

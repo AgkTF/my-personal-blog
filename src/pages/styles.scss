@@ -9,7 +9,7 @@ $green: hsl(141, 71%, 48%);
 
 // variables
 $body-background-color: $my-black;
-$family-sans-serif: 'poppins';
+$family-sans-serif: 'jura';
 $body-min-width: 400px;
 $link: $my-yellow;
 $link-hover: $green;
@@ -21,6 +21,7 @@ $strong-color: $my-white;
 $widescreen-enabled: false;
 $input-border-color: transparent;
 $input-shadow: none;
+$body-size: 18px;
 
 // @import '../../node_modules/bulmaswatch/superhero/bulmaswatch.scss';
 @import '~bulma/bulma.sass';
@@ -29,43 +30,43 @@ $input-shadow: none;
 #article-content {
 	@include touch {
 		h1 {
-			font-size: 2rem;
+			font-size: 1.76rem;
 		}
 		h2 {
-			font-size: 1.67rem;
+			font-size: 1.47rem;
 		}
 		h3 {
-			font-size: 1.33rem;
+			font-size: 1.17rem;
 		}
 		h4 {
-			font-size: 1rem;
+			font-size: 0.88rem;
 		}
 		h5 {
-			font-size: 0.83rem;
+			font-size: 0.73rem;
 		}
 		h6 {
-			font-size: 0.67rem;
+			font-size: 0.59rem;
 		}
 	}
 
 	@include desktop {
 		h1 {
-			font-size: 2.25rem;
+			font-size: 1.98rem;
 		}
 		h2 {
-			font-size: 1.875rem;
+			font-size: 1.65rem;
 		}
 		h3 {
-			font-size: 1.5rem;
+			font-size: 1.32rem;
 		}
 		h4 {
-			font-size: 1.125rem;
+			font-size: 0.99rem;
 		}
 		h5 {
-			font-size: 0.938rem;
+			font-size: 0.83rem;
 		}
 		h6 {
-			font-size: 0.75rem;
+			font-size: 0.66rem;
 		}
 	}
 }
