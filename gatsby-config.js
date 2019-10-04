@@ -6,17 +6,25 @@ module.exports = {
 	siteMetadata: {
 		title: `AgkTF's Blog`,
 		description: `This is the personal blog of AgkTF.`,
-		author: `@agktf`
+		author: `@agktf`,
+		siteUrl: 'https://blog.agktf.com'
 	},
 	plugins: [
 		`gatsby-plugin-sass`,
 		`gatsby-plugin-react-helmet`,
-		// `gatsby-plugin-page-progress`,
+		'gatsby-plugin-robots-txt',
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				path: `${__dirname}/content/blog`,
 				name: `blog`
+			}
+		},
+		{
+			resolve: `gatsby-plugin-google-analytics`,
+			options: {
+				trackingId: 'UA-149421637-1',
+				head: true
 			}
 		},
 		{
@@ -71,6 +79,7 @@ module.exports = {
 				icon: `src/images/blog-icon.png`
 			}
 		},
+		`gatsby-plugin-sitemap`,
 		`gatsby-plugin-offline` // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
 	]
 };

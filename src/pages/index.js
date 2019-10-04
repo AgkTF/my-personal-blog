@@ -45,6 +45,7 @@ const IndexPage = () => {
 										maxWidth: '250px',
 										marginBottom: '2.5rem'
 									}}
+									alt="logo"
 								/>
 								<h1
 									className="title is-size-1-widescreen is-size-2-desktop is-size-3-touch"
