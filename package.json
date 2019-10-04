@@ -12,6 +12,7 @@
 		"@fortawesome/react-fontawesome": "^0.1.4",
 		"bulma": "^0.7.5",
 		"bulmaswatch": "^0.7.5",
+		"disqus-react": "^1.0.7",
 		"dotenv": "^8.1.0",
 		"eslint": "^6.4.0",
 		"eslint-plugin-react": "^7.14.3",
@@ -38,11 +39,7 @@
 		"react-dom": "^16.9.0",
 		"react-helmet": "^5.2.1",
 		"react-reading-progress": "^0.3.0",
-		"react-typography": "^0.16.19",
-		"typeface-cinzel": "^0.0.72",
-		"typeface-jura": "^0.0.72",
-		"typeface-montserrat": "^0.0.75",
-		"typeface-poppins": "^0.0.72"
+		"typeface-jura": "^0.0.72"
 	},
 	"devDependencies": {},
 	"keywords": [
@@ -56,12 +53,5 @@
 		"start": "npm run develop",
 		"serve": "gatsby serve",
 		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/AgkTF/my-personal-blog"
-	},
-	"bugs": {
-		"url": "https://github.com/gatsbyjs/gatsby/issues"
 	}
 }
