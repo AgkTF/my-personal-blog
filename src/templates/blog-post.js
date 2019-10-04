@@ -34,7 +34,7 @@ const post = props => {
 							</span>{' '}
 							{props.data.markdownRemark.timeToRead} min read
 						</p>
-						<p>
+						<div>
 							Share this article on:{' '}
 							<ShareLinks
 								title={
@@ -43,7 +43,7 @@ const post = props => {
 								slug={props.data.markdownRemark.fields.slug}
 								size="lg"
 							/>{' '}
-						</p>
+						</div>
 					</div>
 				</div>
 			</div>

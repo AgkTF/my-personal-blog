@@ -79,6 +79,13 @@ module.exports = {
 				icon: `src/images/blog-icon.png`
 			}
 		},
+		{
+			resolve: `gatsby-plugin-canonical-urls`,
+			options: {
+				siteUrl: `https://blog.agktf.com`,
+				stripQueryString: true
+			}
+		},
 		`gatsby-plugin-sitemap`,
 		`gatsby-plugin-offline` // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
 	]
