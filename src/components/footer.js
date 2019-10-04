@@ -12,7 +12,9 @@ const footer = ({ view }) => {
 		<footer
 			className={
 				'footer' +
-				(view === 'tags' || view === 'singleTag' ? ' fixed-footer' : '')
+				(view === 'tags' || view === 'singleTag' || view === '404'
+					? ' fixed-footer'
+					: '')
 			}
 		>
 			<div className="container">
